@@ -5,6 +5,7 @@ import br.com.alura.screenmatch.calculo.FiltraRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
+import br.com.alura.screenmatch.modelos.Titulo;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -45,13 +46,17 @@ public class App {
         episodio.setTotalVisualizacoes(200);
         filtro.filtra(episodio);
 
-        ArrayList <Filme> listaFilmes = new ArrayList<>();
+        ArrayList <Titulo> listaFilmes = new ArrayList<>();
         //Filme[] listaFilmes = new Filme[10]; \\ Lista criada com tamanho fixo
         listaFilmes.add(titulo1);
         listaFilmes.add(titulo2);
+        listaFilmes.add(titulo3);
         System.out.println("Você tem " + listaFilmes.size() + " Filmes");
-        for (int i = 0; i < listaFilmes.size(); i++) {
-            System.out.println(i+1 + ") " + listaFilmes.get(i).toString());
+        // for (int i = 0; i < listaFilmes.size(); i++) {
+        //     System.out.println(i+1 + ") " + listaFilmes.get(i).toString());
+        // }
+        for (Titulo i:listaFilmes){
+            System.out.println(i);
         }
 
     }
