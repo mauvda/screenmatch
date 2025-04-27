@@ -5,6 +5,12 @@ import br.com.alura.screenmatch.calculo.Classificacao;
 public class Filme extends Titulo implements Classificacao{
     private String diretor;
 
+    public Filme(String nome, String diretor, int anoDeLancamento, int duracaoEmMinutos) {
+        super(nome, anoDeLancamento);
+        this.setDuracaoEmMinutos(duracaoEmMinutos);
+        this.diretor = diretor;
+    }
+
     @Override
     public void exibeFcihaTecnica() {
         // TODO Auto-generated method stub
@@ -23,6 +29,11 @@ public class Filme extends Titulo implements Classificacao{
     @Override
     public int getClassificacao() {
         return (int) getMediaAvaliacao()/2;
+    }
+
+    @Override
+    public String toString() {
+        return "Filme: " + this.getNome() + " (" + this.getAnoDeLancamento() + ") ";
     }
 
 }
