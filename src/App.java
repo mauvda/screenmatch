@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 import br.com.alura.screenmatch.calculo.Calculadora;
 import br.com.alura.screenmatch.calculo.FiltraRecomendacao;
@@ -55,8 +57,12 @@ public class App {
         // for (int i = 0; i < listaFilmes.size(); i++) {
         //     System.out.println(i+1 + ") " + listaFilmes.get(i).toString());
         // }
+        Collections.sort(listaFilmes);
         for (Titulo i:listaFilmes){
             System.out.println(i);
+            if (i instanceof Filme filme && filme.getClassificacao() > 2) {
+                System.out.println("Classificação: " + filme.getClassificacao());
+            }
         }
 
     }
