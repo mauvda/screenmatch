@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
 import br.com.alura.screenmatch.calculo.Calculadora;
@@ -48,17 +47,17 @@ public class App {
         episodio.setTotalVisualizacoes(200);
         filtro.filtra(episodio);
 
-        ArrayList <Titulo> listaFilmes = new ArrayList<>();
-        //Filme[] listaFilmes = new Filme[10]; \\ Lista criada com tamanho fixo
+        ArrayList<Titulo> listaFilmes = new ArrayList<>();
+        // Filme[] listaFilmes = new Filme[10]; \\ Lista criada com tamanho fixo
         listaFilmes.add(titulo1);
         listaFilmes.add(titulo2);
         listaFilmes.add(titulo3);
         System.out.println("Você tem " + listaFilmes.size() + " Filmes");
         // for (int i = 0; i < listaFilmes.size(); i++) {
-        //     System.out.println(i+1 + ") " + listaFilmes.get(i).toString());
+        // System.out.println(i+1 + ") " + listaFilmes.get(i).toString());
         // }
         Collections.sort(listaFilmes);
-        for (Titulo i:listaFilmes){
+        for (Titulo i : listaFilmes) {
             System.out.println(i);
             if (i instanceof Filme filme && filme.getClassificacao() > 2) {
                 System.out.println("Classificação: " + filme.getClassificacao());
